@@ -1,0 +1,11 @@
+
+#createBtn {
+    width:5rem;
+    border: none;
+    margin-top: 1rem;
+    margin-left: 20%;
+}
+
+.likes {
+    color: red;
+}

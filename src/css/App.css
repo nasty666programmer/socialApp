@@ -1,0 +1,18 @@
+nav{
+    width: inherit;
+    height: inherit;
+    margin-left: 40%;
+    color:rgb(172, 142, 142);
+  
+}
+
+.PostNav {
+    margin-left: 2rem;
+    font-size: x-large;
+}
+
+#aboutApp {
+    font-size: x-large;
+    margin-left: 25%;
+    margin-top: 10rem;
+}
