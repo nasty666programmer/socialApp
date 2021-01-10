@@ -6,8 +6,11 @@ import createPost from './reducers/action'
 function CreatePosts(props) {
 
     const {register,handleSubmit} = useForm();
+
+    function onSubmit(data){
     
-    const onSubmit = data => props.createPost(data);
+        props.createPost(data);
+    }
     
 
     return (
@@ -17,11 +20,11 @@ function CreatePosts(props) {
                      <div class="card-body">
                      <form style={{marginLeft:'30%'}} onSubmit={handleSubmit(onSubmit)}>
                         <p class="card-text">Enter you name</p>
-                        <input ref={register} name='firstname'/>
+                        <input required ref={register} name='firstname'/>
                         <p class="card-text">Enter your's user name</p>
-                        <input ref={register} name='userName'/>
+                        <input required ref={register} name='userName'/>
                         <p class="card-text">Enter the text</p>
-                        <textarea ref={register} name='text'/>
+                        <textarea required ref={register} name='text'/>
                         <br/>
                         <button className="btn btn-primary" style={{width:'5rem',border:'none',marginLeft:'25%',marginTop:'2rem'}}>Add</button>
                         </form>

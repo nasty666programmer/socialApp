@@ -9,3 +9,23 @@
 .likes {
     color: red;
 }
+
+.wrapper {
+    width: 40rem;
+    height: 25rem;
+    background-color: gray;
+    margin-left: 25%;
+}
+
+.cardSaved {
+    width: 14rem;
+    height: 9rem;
+    margin: 1rem 1rem;
+    text-align: center;
+}
+
+.cont {
+    
+   
+    max-width: inherit;
+}
