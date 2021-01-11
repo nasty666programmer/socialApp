@@ -1,0 +1,28 @@
+.wrapper {
+    border-radius: 6px;
+    width: 60rem;
+    height: 30rem;
+    background-color:#e1d89f;
+    margin-left: 15%;
+    position: fixed;
+    top: 5rem;
+    overflow-y: scroll;
+    box-shadow: -2rem 4rem 8rem 7rem black;
+
+}
+  
+  
+  .wrapper::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .wrapper::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+  }
+  
+  .wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(44,6,31,1) 0%, rgba(55,64,69,1) 35%, rgba(216,146,22,1) 100%);
+  }

@@ -13,8 +13,8 @@ class App extends React.Component {
   render(){
   return (
     <Router>
-    <div>
-        <nav>
+    <div className='headCont'>
+        <nav >
           <Link to='/createPosts'><span className='PostNav'>Create the post</span></Link>
           <Link to='/allPosts'><span className='PostNav'>All Posts</span></Link>
           </nav>
