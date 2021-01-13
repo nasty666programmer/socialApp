@@ -5,14 +5,24 @@ import '../css/createPosts.css';
 import {BrowserRouter as Router,Link,Switch,Route} from 'react-router-dom';
 import {useHistory} from 'react-router-dom';
      
-function AllPosts({posts},props) {
-    const [flag,setFlag] = useState(false);
+function AllPosts({posts}) {
+    
     const history = useHistory();
-   let arrUser = [{
+   let arrUser = {
        userName:null,
-       text:null
-   }];
-   arrUser.shift()
+       text:null,
+       id:null
+   };
+   
+   const [usersData,setUsersData] = useState([arrUser])
+   usersData.shift()
+   
+   const deleteSavedPost = (id) => {
+    setUsersData(prevState => prevState.filter(el => el.id !== id ? delete  el.id : usersData.push(el)))
+    console.log(usersData)
+    history.push('/allPosts')
+}
+
     return (
         
         <Router>
@@ -21,9 +31,9 @@ function AllPosts({posts},props) {
                 <Link to='/savedPosts'><span  className='PostNav'>Saved Posts</span></Link>
             </nav>
                 <div>           
-                {posts.map(post => 
+                {posts.map((post,index) => 
                 <div class="card cardSaved" style={{margin:"1rem 1rem",backgroundColor:'#374045'}} onClick={() => {
-                    arrUser.push({userName:post.userName, text:post.text})
+                    usersData.push({userName:post.userName, text:post.text,id:index})
                     }}>
                 <h3>@{post.userName}</h3>
                 <h5>{post.firstname}</h5>
@@ -31,11 +41,11 @@ function AllPosts({posts},props) {
                   <p class="card-text">{post.text}</p>
                 </div>
               </div>    
-                )}
+            )}
                 </div> 
                 <Switch>
                     <Route path='/savedPosts'>
-                        <SavedPosts user={arrUser}/>
+                        <SavedPosts user={usersData} deletePost={deleteSavedPost}/>
                     </Route>
                 </Switch>
         </div>

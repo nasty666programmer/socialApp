@@ -8,7 +8,6 @@ function CreatePosts(props) {
     const {register,handleSubmit} = useForm();
 
     function onSubmit(data){
-    
         props.createPost(data);
     }
     

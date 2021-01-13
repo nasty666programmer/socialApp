@@ -12,6 +12,7 @@
 .cardSaved {
     width: 18rem;
     height: 13rem;
+    margin-top: -1rem;
     padding: 1rem 1rem;;
     text-align: center;
     position: relative;

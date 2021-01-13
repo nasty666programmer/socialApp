@@ -26,3 +26,14 @@
     border-radius: 10px;
     background: linear-gradient(90deg, rgba(44,6,31,1) 0%, rgba(55,64,69,1) 35%, rgba(216,146,22,1) 100%);
   }
+
+  .buttonFetch {
+    background-color: blue;
+    color:goldenrod;
+    border:none;
+    width:5rem;
+    height:3rem;
+    margin-left:48%;
+    margin-top: 4px;
+    position: absolute;
+  }
